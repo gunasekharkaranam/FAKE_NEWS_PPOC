@@ -1,0 +1,26 @@
+claim,label,truth
+"The Eiffel Tower is located in Rome, Italy, and was completed in 1952.",fake,"Paris, France; completed 1889"
+Mount Everest is the tallest mountain in Africa.,fake,"In the Himalayas, Asia"
+The Great Wall of China is located in Japan.,fake,In China
+Water boils at 50 degrees Celsius at sea level.,fake,100 degrees Celsius
+The Amazon River flows through Australia.,fake,South America
+Albert Einstein was born in Canada in 1950.,fake,"Ulm, Germany, 1879"
+The Taj Mahal is located in Delhi.,fake,"Agra, India"
+Mahatma Gandhi was the first Prime Minister of India.,fake,Jawaharlal Nehru
+The Pacific Ocean is the smallest ocean on Earth.,fake,It is the largest
+The Moon is larger than the Earth.,fake,The Moon is much smaller
+Isaac Newton discovered penicillin.,fake,Alexander Fleming
+The Statue of Liberty was a gift from Germany to the United States.,fake,A gift from France
+The Python programming language was created by Bill Gates.,fake,Guido van Rossum
+The human heart has six chambers.,fake,Four chambers
+Tokyo is the capital city of China.,fake,Beijing
+"The Eiffel Tower is located in Paris, France.",real,
+Mount Everest is located in the Himalayas on the border of Nepal and China.,real,
+"The Taj Mahal is located in Agra, India.",real,
+Jawaharlal Nehru was the first Prime Minister of India.,real,
+Alexander Fleming discovered penicillin in 1928.,real,
+The Statue of Liberty was a gift from France to the United States.,real,
+The Pacific Ocean is the largest ocean on Earth.,real,
+The Python programming language was created by Guido van Rossum.,real,
+Water boils at 100 degrees Celsius at sea level.,real,
+The human heart has four chambers.,real,

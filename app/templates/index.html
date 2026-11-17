@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fake News Checker</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <h1>Fake News Checker</h1>
+    <p class="sub">Checks the <b>facts</b> against trusted sources, and the <b>writing style</b> with a model trained on 29k fact-checked claims and headlines.</p>
+  </header>
+
+  <section class="card">
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="text" type="button">Paste text</button>
+      <button class="tab" data-tab="url" type="button">Paste a link</button>
+    </div>
+    <form id="form">
+      <textarea id="text" placeholder="Paste a news article, headline or claim..." rows="7"></textarea>
+      <input id="url" type="url" placeholder="https://example.com/news/article" hidden>
+      <div class="row">
+        <label class="toggle"><input id="evidence" type="checkbox" checked> Check facts with sources</label>
+        <button id="go" type="submit">Check</button>
+      </div>
+      <div class="examples">Try:
+        <button type="button" class="ex">SHOCKING!!! Doctors HATE this secret cure that the government BANNED!</button>
+        <button type="button" class="ex">The Eiffel Tower is located in Rome, Italy, and was completed in 1952.</button>
+        <button type="button" class="ex">Mount Everest is the highest mountain above sea level, located in the Himalayas.</button>
+      </div>
+    </form>
+  </section>
+
+  <p id="error" class="error" hidden></p>
+  <p id="loading" class="loading" hidden>Checking claims and searching sources...</p>
+
+  <section id="result" hidden>
+    <div id="verdict" class="card verdict">
+      <div class="verdict-label" id="verdict-label"></div>
+      <div class="verdict-reason" id="verdict-reason"></div>
+      <div class="decided" id="decided"></div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Fact check</h2>
+        <div id="claims"></div>
+      </div>
+      <div class="card">
+        <h2>Writing style</h2>
+        <div class="meter"><div id="meter-fill"></div></div>
+        <div class="meter-labels"><span>looks real</span><span id="style-num"></span><span>looks fake</span></div>
+        <h3>Words that pushed the decision</h3>
+        <div id="words" class="chips"></div>
+        <h3>Style signals</h3>
+        <ul id="signals" class="signals"></ul>
+        <p class="note">Style alone cannot tell if a calm, well-written text is true. That is why facts are checked first.</p>
+      </div>
+    </div>
+
+    <div class="card feedback">
+      <span>Was this result correct?</span>
+      <button type="button" data-ok="1">Yes</button>
+      <button type="button" data-ok="0">No</button>
+      <span id="thanks" hidden>Thanks, saved.</span>
+    </div>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
