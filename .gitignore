@@ -1,1 +1,12 @@
-ENV
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+ENV/
+.venv/
+venv/
+data/raw/
+data/feedback.db
+models/transformer/
+runs/
+.ipynb_checkpoints/

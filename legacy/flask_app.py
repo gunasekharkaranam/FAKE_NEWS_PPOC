@@ -22,7 +22,7 @@ with open("tfidf_vectorizer.pkl", "rb") as vec_file:
 def preprocess(text):
     text = text.lower()
     text = re.sub(r"http\S+|www\S+|https\S+", '', text)
-    text = re.sub(r'\@w+|\#','', text)
+    text = re.sub(r'@\w+|#','', text)
     text = re.sub(r'[^A-Za-z\s]', '', text)
     text = text.translate(str.maketrans('', '', string.punctuation))
     tokens = text.split()
@@ -47,7 +47,8 @@ def index():
                 prediction = "Out of scope"
             else:
                 result = model.predict(vectorized)
-                prediction = "Fake" if result[0] == 1 else "Real"
+                # Training notebook used 1 = "Real", so map 1 -> Real (this was swapped before)
+                prediction = "Real" if result[0] == 1 else "Fake"
     return render_template("index.html", prediction=prediction, original_text=original_text)
 
 if __name__ == "__main__":
