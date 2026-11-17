@@ -1,0 +1,150 @@
+{
+  "label_rule": "1 = fake, 0 = real",
+  "datasets": {
+    "liar": {
+      "train": 11553,
+      "test": 1283,
+      "fake_share": 0.443
+    },
+    "politifact": {
+      "train": 783,
+      "test": 196,
+      "fake_share": 0.437
+    },
+    "gossipcop": {
+      "train": 16560,
+      "test": 4140,
+      "fake_share": 0.236
+    }
+  },
+  "cross": {
+    "liar": {
+      "liar": {
+        "accuracy": 0.61,
+        "macro_f1": 0.606,
+        "fake_f1": 0.563,
+        "roc_auc": 0.658,
+        "n": 1283
+      },
+      "politifact": {
+        "accuracy": 0.515,
+        "macro_f1": 0.499,
+        "fake_f1": 0.589,
+        "roc_auc": 0.538,
+        "n": 196
+      },
+      "gossipcop": {
+        "accuracy": 0.424,
+        "macro_f1": 0.421,
+        "fake_f1": 0.374,
+        "roc_auc": 0.546,
+        "n": 4140
+      }
+    },
+    "politifact": {
+      "liar": {
+        "accuracy": 0.541,
+        "macro_f1": 0.511,
+        "fake_f1": 0.39,
+        "roc_auc": 0.506,
+        "n": 1283
+      },
+      "politifact": {
+        "accuracy": 0.827,
+        "macro_f1": 0.822,
+        "fake_f1": 0.795,
+        "roc_auc": 0.896,
+        "n": 196
+      },
+      "gossipcop": {
+        "accuracy": 0.479,
+        "macro_f1": 0.451,
+        "fake_f1": 0.328,
+        "roc_auc": 0.508,
+        "n": 4140
+      }
+    },
+    "gossipcop": {
+      "liar": {
+        "accuracy": 0.561,
+        "macro_f1": 0.446,
+        "fake_f1": 0.192,
+        "roc_auc": 0.531,
+        "n": 1283
+      },
+      "politifact": {
+        "accuracy": 0.607,
+        "macro_f1": 0.535,
+        "fake_f1": 0.353,
+        "roc_auc": 0.588,
+        "n": 196
+      },
+      "gossipcop": {
+        "accuracy": 0.814,
+        "macro_f1": 0.761,
+        "fake_f1": 0.647,
+        "roc_auc": 0.863,
+        "n": 4140
+      }
+    }
+  },
+  "final": {
+    "liar": {
+      "accuracy": 0.563,
+      "macro_f1": 0.563,
+      "fake_f1": 0.561,
+      "roc_auc": 0.612,
+      "n": 1283
+    },
+    "politifact": {
+      "accuracy": 0.628,
+      "macro_f1": 0.627,
+      "fake_f1": 0.618,
+      "roc_auc": 0.736,
+      "n": 196
+    },
+    "gossipcop": {
+      "accuracy": 0.82,
+      "macro_f1": 0.761,
+      "fake_f1": 0.643,
+      "roc_auc": 0.855,
+      "n": 4140
+    }
+  },
+  "top_words": {
+    "fake": [
+      "celebr react",
+      "beg",
+      "obama",
+      "trump",
+      "jealou",
+      "desper",
+      "report",
+      "brad",
+      "caitlyn",
+      "hollywoodlif",
+      "debunk",
+      "benghazi",
+      "brad pitt",
+      "obamacar",
+      "wisconsin"
+    ],
+    "real": [
+      "award",
+      "son",
+      "cardi",
+      "season",
+      "say donald",
+      "transcript",
+      "dress",
+      "wear",
+      "grace",
+      "sweet",
+      "recap",
+      "babi no",
+      "birthday",
+      "arrang",
+      "riverdal"
+    ]
+  }
+}
