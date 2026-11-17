@@ -1,0 +1,6 @@
+# Adds the NLI fact-checking model and transformer training (needs more RAM/GPU).
+-r requirements.txt
+torch>=2.3
+transformers>=4.44
+datasets>=2.20
+accelerate>=0.33

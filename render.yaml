@@ -1,0 +1,18 @@
+# Render free plan (512 MB RAM) is too small for the NLI model, so this runs the
+# light mode: style model + Google fact-check ratings + Wikipedia evidence list.
+# For the full NLI version use Hugging Face Spaces (see docs/DEPLOY.md).
+services:
+  - type: web
+    name: fake-news-checker
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: ENABLE_NLI
+        value: "0"
+      - key: GOOGLE_FACTCHECK_API_KEY
+        sync: false
