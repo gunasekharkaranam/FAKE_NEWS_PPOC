@@ -1,22 +1,14 @@
-﻿blinker==1.9.0
-click==8.2.1
-colorama==0.4.6
-Flask==3.1.1
-gunicorn==20.1.0
-itsdangerous==2.2.0
-Jinja2==3.1.6
-joblib==1.5.1
-MarkupSafe==3.0.2
-nltk==3.9.1
-numpy==2.3.1
-pandas==2.3.0
-python-dateutil==2.9.0.post0
-pytz==2025.2
-regex==2024.11.6
-scikit-learn==1.7.0
-scipy==1.16.0
-six==1.17.0
-threadpoolctl==3.6.0
-tqdm==4.67.1
-tzdata==2025.2
-Werkzeug==3.1.3
+# Web app (light: style model + fact-check API + Wikipedia). Works on small free servers.
+# scikit-learn is pinned because the saved model file must be loaded with the same version.
+scikit-learn==1.9.1
+numpy>=2.0
+scipy>=1.13
+pandas>=2.2
+joblib>=1.4
+nltk>=3.9
+fastapi>=0.115
+uvicorn[standard]>=0.30
+jinja2>=3.1
+pydantic>=2.7
+requests>=2.32
+beautifulsoup4>=4.12
